@@ -1,4 +1,10 @@
+if(global.death && alarm[0] <= 0){
+	alarm[0] = 60;
+	audio_play_sound(snd_dead, 0, 0);
+}
+
 if(global.death){exit}
+
 var _right = keyboard_check(ord("D"));
 var _left = keyboard_check(ord("A"));
 var _jump = keyboard_check_pressed(vk_space);
@@ -31,6 +37,6 @@ if(place_meeting(x, y+vspd, obj_collider)){
 y+=vspd;
 
 if(place_meeting(x, y+1, obj_collider) && _jump){
-	vspd -= 6.2;
+	vspd -= 5.4;
 	audio_play_sound(snd_jump, 0, 0);
 }

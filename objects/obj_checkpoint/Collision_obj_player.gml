@@ -1,4 +1,11 @@
+if(active){exit}
+with(obj_checkpoint){
+	active = false;
+}
+
+active = true;
+
 global.ckp_x = x;
 global.ckp_y = y;
 
-image_index = 1;
+audio_play_sound(snd_checkpoint, 0, 0);

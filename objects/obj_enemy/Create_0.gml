@@ -1,0 +1,1 @@
+path_start(paths, spd_emy, path_action_reverse, 0);

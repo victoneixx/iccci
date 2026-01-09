@@ -1,5 +1,6 @@
 global.death = false;
 global.death_counter = 0;
+global.item_counter = 0;
 global.ckp_x = 0;
 global.ckp_y = 0;
 

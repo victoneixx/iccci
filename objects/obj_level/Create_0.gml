@@ -1,1 +1,0 @@
-//audio_play_sound(snd_space_quest_looped_section, 0, 1);
