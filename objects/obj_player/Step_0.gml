@@ -10,6 +10,16 @@ var _left = keyboard_check(ord("A"));
 var _jump = keyboard_check_pressed(vk_space);
 
 hspd = (_right - _left)*spd;
+
+#region Sistema da belt
+var _belt_spd = 2.2;
+if (place_meeting(x, y + sign(grav), obj_belt_right)) {
+	hspd += _belt_spd;
+} else if(place_meeting(x, y + sign(grav), obj_belt_left)){
+	hspd -= _belt_spd;
+}
+#endregion
+
 vspd += grav;
 grav = clamp(grav, 0, 2);
 if(hspd != 0){image_xscale = sign(hspd)}
@@ -37,6 +47,6 @@ if(place_meeting(x, y+vspd, obj_collider)){
 y+=vspd;
 
 if(place_meeting(x, y+1, obj_collider) && _jump){
-	vspd -= 5.4;
+	vspd -= 5.5;
 	audio_play_sound(snd_jump, 0, 0);
 }

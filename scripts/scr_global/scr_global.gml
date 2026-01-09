@@ -9,5 +9,6 @@ function death_player(){
 		global.death = true;
 		global.death_counter++;
 		sprite_index = spr_player_dead;
+		global.hspd_g = 0;
 	}
 }

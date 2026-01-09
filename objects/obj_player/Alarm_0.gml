@@ -4,4 +4,5 @@ if(global.ckp_x != 0){
 }
 hspd = 0;
 vspd = 0;
+global.hspd_g = 0;
 global.death = false;
